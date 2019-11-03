@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "motor.api", "motor.api\motor.api.csproj", "{1EA90B9E-D3D5-4B35-BE38-E255C0F41D1B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EA90B9E-D3D5-4B35-BE38-E255C0F41D1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EA90B9E-D3D5-4B35-BE38-E255C0F41D1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EA90B9E-D3D5-4B35-BE38-E255C0F41D1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EA90B9E-D3D5-4B35-BE38-E255C0F41D1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1BAA1A3E-8C04-4E5E-82EF-B0C5554FF74B}
+	EndGlobalSection
+EndGlobal
