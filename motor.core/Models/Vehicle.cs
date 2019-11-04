@@ -10,7 +10,7 @@ namespace motor.core.Models
     public class Vehicle
     {
         [Key]
-        public long Id { get; set; }
+        public int Id { get; set; }
 
         [Required,Column("name",TypeName ="varchar(50)")]
         public string Name { get; set; }

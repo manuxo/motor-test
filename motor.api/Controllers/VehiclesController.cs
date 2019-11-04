@@ -16,41 +16,41 @@ namespace motor.api.Controllers
     [ApiController]
     public class VehiclesController : ControllerBase
     {
-        private readonly MotorDbContext _context;
+        private readonly IVehicleRepository _service;
 
-        public VehiclesController(MotorDbContext context)
+        public VehiclesController(IVehicleRepository repository)
         {
-            _context = context;
+            _service = repository;
         }
 
         [HttpGet]
         public ActionResult<IEnumerable<Vehicle>> Get()
         {
-            var vehicles = _context.Vehicles.ToList();
-            return vehicles;
+            return _service.List();
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Vehicle> Find([FromRoute(Name ="id")] int id)
+        {
+            return _service.Find(id);
         }
 
         [HttpPost]
         public void Post([FromBody] Vehicle vehicle)
         {
-            _context.Vehicles.Add(vehicle);
-            _context.SaveChanges();
+            _service.Add(vehicle);
         }
 
         [HttpPut("{id}")]
-        public void Put([FromRoute(Name ="id")] long id,[FromBody] Vehicle vehicle)
+        public void Put([FromRoute(Name ="id")] int id,[FromBody] Vehicle vehicle)
         {
-            var current = _context.Vehicles.Find(id);
-            ReflectionHelper.CopyPropertiesTo(vehicle, current, false);
-            _context.SaveChanges();
+            _service.Update(id, vehicle);
         }
 
         [HttpDelete("{id}")]
-        public void Delete([FromRoute(Name ="id")] long id)
+        public void Delete([FromRoute(Name ="id")] int id)
         {
-            var current = _context.Vehicles.Find(id);
-            _context.Vehicles.Remove(current);
-            _context.SaveChanges();
+            _service.Delete(id);
         }
     }
 }

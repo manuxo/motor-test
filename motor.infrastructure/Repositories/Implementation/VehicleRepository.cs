@@ -6,7 +6,7 @@ using motor.infrastructure.Database;
 
 namespace motor.infrastructure.Repositories.Implementation
 {
-    public class VehicleRepository : Repository<Vehicle,long>,IVehicleRepository
+    public class VehicleRepository : Repository<Vehicle,int>,IVehicleRepository
     {
         public VehicleRepository(MotorDbContext _context): base(_context)
         {

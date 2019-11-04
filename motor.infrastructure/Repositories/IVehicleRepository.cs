@@ -5,7 +5,7 @@ using System.Text;
 
 namespace motor.infrastructure.Repositories
 {
-    public interface IVehicleRepository: IRepository<Vehicle, long>
+    public interface IVehicleRepository: IRepository<Vehicle, int>
     {
 
     }
